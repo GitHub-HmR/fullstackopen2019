@@ -1,0 +1,10 @@
+note over browser: Browsing to https://fullstack-exampleapp.herokuapp.com/spa
+note over browser: Entering text "HelloWorld" as input and click "Save" button for submit
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+note over browser: Fetched JS-Code in spa.js registers handler,creates/adds/render note and POST JSON to server 
+
+server-->browser: {content: "HelloWorld", date: "2019-08-01T11:10:55.791Z"}
+
+note over browser: main.css beautifies when browser renders page

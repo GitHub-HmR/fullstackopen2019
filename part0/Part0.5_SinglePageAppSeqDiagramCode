@@ -1,0 +1,6 @@
+note over browser:  BROWSE TO https://fullstack-exampleapp.herokuapp.com/spa
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+server-->browser: REQUEST PAYLOAD: {content: "HelloWorld", date: "2019-08-01T11:10:55.791Z"}
+server-->browser: RESPONSE {"message":"note created"}
+note over browser: Browser renders page

@@ -1,0 +1,20 @@
+note over browser: Entering text "Testing notes" as input and click "Save" button for submit
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+server-->browser: LOCATION REDIRECT ../notes
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+server-->browser: HTML-Code
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server-->browser: Stylesheet: main.css
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+server-->browser: JavaScript: main.js 
+
+
+note over browser: JS-Code requesting JSON Data from server
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server-->browser: { content: "Testing notes", date: "2019-08-01T09:48:19.836Z" }
+
+note over browser: Browser execs handler and renders page
